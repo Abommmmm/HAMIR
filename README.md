@@ -1,11 +1,10 @@
 ## Environment
-
-Python 3.11 or 3.12 is recommended. Install the CUDA-enabled PyTorch wheel
-appropriate for the host first, then install the remaining dependencies:
-
-```bash
-pip install torch==2.8.0 --index-url https://download.pytorch.org/whl/cu126
-pip install -r requirements.txt
-```
-
+numpy==2.2.6
+pandas==2.2.3
+PyYAML==6.0.2
+rdkit==2025.3.6
+scikit-learn==1.7.2
+tqdm==4.67.1
+Pillow==11.0.0
+pytest==9.1.1
 
