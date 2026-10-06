@@ -1,0 +1,134 @@
+{
+  "metric": "pooled atom-level F1 at threshold 0.5",
+  "training_protocol": "All models trained on the same USPTO-50K split using their validation-best checkpoints; MIT/FULL freeze those checkpoints without fine-tuning.",
+  "baseline_scope": "Adapted implementations under the common reaction-site task, not official end-to-end reproductions of the original papers.",
+  "spaba_note": "SPABA-style baseline does not use CLM pretraining.",
+  "rows": [
+    {
+      "dataset": "USPTO-50K",
+      "model": "A2",
+      "atom_f1": 0.9418023330342263,
+      "examples": 3557,
+      "metrics_path": "E:\\lunwen\\project4\\DCIA\\outputs\\results\\reaction_sites\\uspto50k\\painn_a2_hierarchical_motif\\test_metrics.json"
+    },
+    {
+      "dataset": "USPTO-50K",
+      "model": "Adapted DRACON",
+      "atom_f1": 0.9154436598096407,
+      "examples": 3557,
+      "metrics_path": "E:\\lunwen\\project4\\DCIA\\outputs\\results\\reaction_sites\\uspto50k\\dracon_atom\\test_metrics.json"
+    },
+    {
+      "dataset": "USPTO-50K",
+      "model": "Adapted RMechRP",
+      "atom_f1": 0.9333417259394472,
+      "examples": 3557,
+      "metrics_path": "E:\\lunwen\\project4\\DCIA\\outputs\\results\\reaction_sites\\uspto50k\\rmechrp_site\\test_metrics.json"
+    },
+    {
+      "dataset": "USPTO-50K",
+      "model": "Adapted ReactAIvate",
+      "atom_f1": 0.9386924446705673,
+      "examples": 3557,
+      "metrics_path": "E:\\lunwen\\project4\\DCIA\\outputs\\results\\reaction_sites\\uspto50k\\reactaivate_rai\\test_metrics.json"
+    },
+    {
+      "dataset": "USPTO-50K",
+      "model": "Adapted EAC-2Hop",
+      "atom_f1": 0.854565688514028,
+      "examples": 3557,
+      "metrics_path": "E:\\lunwen\\project4\\DCIA\\outputs\\results\\reaction_sites\\uspto50k\\eac_2hop\\test_metrics.json"
+    },
+    {
+      "dataset": "USPTO-50K",
+      "model": "SPABA-style (no CLM pretraining)",
+      "atom_f1": 0.7153114886731392,
+      "examples": 3557,
+      "metrics_path": "E:\\lunwen\\project4\\DCIA\\outputs\\results\\reaction_sites\\uspto50k\\spaba_style_7_7\\test_metrics.json"
+    },
+    {
+      "dataset": "USPTO-MIT zero-shot",
+      "model": "A2",
+      "atom_f1": 0.6546059037921153,
+      "examples": 26078,
+      "metrics_path": "E:\\lunwen\\project4\\DCIA\\outputs\\results\\reaction_sites\\uspto_mit\\painn_a2_zero_shot\\test_metrics.json"
+    },
+    {
+      "dataset": "USPTO-MIT zero-shot",
+      "model": "Adapted DRACON",
+      "atom_f1": 0.6067865881530476,
+      "examples": 26078,
+      "metrics_path": "E:\\lunwen\\project4\\DCIA\\outputs\\results\\reaction_sites\\uspto_mit\\dracon_atom_zero_shot\\test_metrics.json"
+    },
+    {
+      "dataset": "USPTO-MIT zero-shot",
+      "model": "Adapted RMechRP",
+      "atom_f1": 0.587171275525852,
+      "examples": 26078,
+      "metrics_path": "E:\\lunwen\\project4\\DCIA\\outputs\\results\\reaction_sites\\uspto_mit\\rmechrp_site_zero_shot\\test_metrics.json"
+    },
+    {
+      "dataset": "USPTO-MIT zero-shot",
+      "model": "Adapted ReactAIvate",
+      "atom_f1": 0.5862653359792575,
+      "examples": 26078,
+      "metrics_path": "E:\\lunwen\\project4\\DCIA\\outputs\\results\\reaction_sites\\uspto_mit\\reactaivate_rai_zero_shot\\test_metrics.json"
+    },
+    {
+      "dataset": "USPTO-MIT zero-shot",
+      "model": "Adapted EAC-2Hop",
+      "atom_f1": 0.6053466672981805,
+      "examples": 26078,
+      "metrics_path": "E:\\lunwen\\project4\\DCIA\\outputs\\results\\reaction_sites\\uspto_mit\\eac_2hop_zero_shot\\test_metrics.json"
+    },
+    {
+      "dataset": "USPTO-MIT zero-shot",
+      "model": "SPABA-style (no CLM pretraining)",
+      "atom_f1": 0.49251680067527354,
+      "examples": 26078,
+      "metrics_path": "E:\\lunwen\\project4\\DCIA\\outputs\\results\\reaction_sites\\uspto_mit\\spaba_style_7_7_zero_shot\\test_metrics.json"
+    },
+    {
+      "dataset": "USPTO-FULL zero-shot",
+      "model": "A2",
+      "atom_f1": 0.7068665976617723,
+      "examples": 66752,
+      "metrics_path": "E:\\lunwen\\project4\\DCIA\\outputs\\results\\reaction_sites\\uspto_full\\painn_a2_zero_shot\\test_metrics.json"
+    },
+    {
+      "dataset": "USPTO-FULL zero-shot",
+      "model": "Adapted DRACON",
+      "atom_f1": 0.6532388525598669,
+      "examples": 66752,
+      "metrics_path": "E:\\lunwen\\project4\\DCIA\\outputs\\results\\reaction_sites\\uspto_full\\dracon_atom_zero_shot\\test_metrics.json"
+    },
+    {
+      "dataset": "USPTO-FULL zero-shot",
+      "model": "Adapted RMechRP",
+      "atom_f1": 0.6265856937439372,
+      "examples": 66752,
+      "metrics_path": "E:\\lunwen\\project4\\DCIA\\outputs\\results\\reaction_sites\\uspto_full\\rmechrp_site_zero_shot\\test_metrics.json"
+    },
+    {
+      "dataset": "USPTO-FULL zero-shot",
+      "model": "Adapted ReactAIvate",
+      "atom_f1": 0.6283154019213818,
+      "examples": 66752,
+      "metrics_path": "E:\\lunwen\\project4\\DCIA\\outputs\\results\\reaction_sites\\uspto_full\\reactaivate_rai_zero_shot\\test_metrics.json"
+    },
+    {
+      "dataset": "USPTO-FULL zero-shot",
+      "model": "Adapted EAC-2Hop",
+      "atom_f1": 0.6636320497724038,
+      "examples": 66752,
+      "metrics_path": "E:\\lunwen\\project4\\DCIA\\outputs\\results\\reaction_sites\\uspto_full\\eac_2hop_zero_shot\\test_metrics.json"
+    },
+    {
+      "dataset": "USPTO-FULL zero-shot",
+      "model": "SPABA-style (no CLM pretraining)",
+      "atom_f1": 0.500785062026572,
+      "examples": 66752,
+      "metrics_path": "E:\\lunwen\\project4\\DCIA\\outputs\\results\\reaction_sites\\uspto_full\\spaba_style_7_7_zero_shot\\test_metrics.json"
+    }
+  ]
+}
