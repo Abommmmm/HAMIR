@@ -1,0 +1,9 @@
+pytorch==2.8.0
+numpy==2.2.6
+pandas==2.2.3
+PyYAML==6.0.2
+rdkit==2025.3.6
+scikit-learn==1.7.2
+tqdm==4.67.1
+Pillow==11.0.0
+pytest==9.1.1

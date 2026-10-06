@@ -1,0 +1,53 @@
+seed: 17
+
+paths:
+  uspto_train: data/raw/reactions/uspto_50k/atom_mapped_train.csv
+  uspto_valid: data/raw/reactions/uspto_50k/atom_mapped_valid.csv
+  uspto_test: data/raw/reactions/uspto_50k/atom_mapped_test.csv
+  train_index: outputs/reaction_sites/uspto50k/index/train.jsonl
+  valid_index: outputs/reaction_sites/uspto50k/index/valid.jsonl
+  test_index: outputs/reaction_sites/uspto50k/index/test.jsonl
+  preparation_report: outputs/reaction_sites/uspto50k/preparation_report.json
+  molecule_cache: outputs/reaction_sites/uspto50k/molecules
+  geometry_report: outputs/reaction_sites/uspto50k/geometry_report.json
+  checkpoints: outputs/checkpoints/reaction_sites/uspto50k/painn_a2_hierarchical_motif
+  results: outputs/results/reaction_sites/uspto50k/painn_a2_hierarchical_motif
+
+data:
+  component_policy: exactly-two
+  require_positive_both: true
+  max_atoms_per_molecule: 128
+  conformer_max_iters: 100
+
+model:
+  hidden_dim: 128
+  painn_layers: 5
+  num_rbf: 20
+  cutoff: 5.0
+  dropout: 0.10
+  architecture: hierarchical_motif
+  attention_heads: 4
+  attention_topk: 4
+
+loss:
+  focal_gamma: 2.0
+  dice_weight: 0.5
+  max_pos_weight: 20.0
+  group_weight: 0.2
+  consistency_weight: 0.1
+
+training:
+  device: cuda
+  batch_size: 64
+  gradient_accumulation_steps: 1
+  num_workers: 6
+  mixed_precision: fp16
+  learning_rate: 0.0002
+  weight_decay: 0.00001
+  epochs: 60
+  patience: 8
+  lr_patience: 3
+  lr_factor: 0.5
+  min_learning_rate: 0.000001
+  gradient_clip: 1.0
+  threshold: 0.5
