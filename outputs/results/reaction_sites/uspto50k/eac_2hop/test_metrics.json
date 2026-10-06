@@ -1,0 +1,17 @@
+{
+  "atom_f1": 0.854565688514028,
+  "atom_precision": 0.7800470487596236,
+  "atom_recall": 0.9448257997668695,
+  "top3_atom_hit_rate": 0.9952206915940399,
+  "exact_pair_center_accuracy": 0.5383750351419736,
+  "examples": 3557,
+  "true_positives": 7295,
+  "false_positives": 2057,
+  "false_negatives": 426,
+  "threshold": 0.5,
+  "split": "test",
+  "checkpoint": "/root/autodl-tmp/DCIA/outputs/checkpoints/reaction_sites/uspto50k/eac_2hop/best.pt",
+  "checkpoint_epoch": 27,
+  "primary_metric": "atom_f1",
+  "model_variant": "adapted_eac_2hop"
+}

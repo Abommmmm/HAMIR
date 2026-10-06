@@ -1,0 +1,16 @@
+{
+  "atom_f1": 0.9396214308630094,
+  "atom_precision": 0.9310783316378434,
+  "atom_recall": 0.9483227561196736,
+  "top3_atom_hit_rate": 0.9977509136913129,
+  "exact_pair_center_accuracy": 0.8220410458251335,
+  "examples": 3557,
+  "true_positives": 7322,
+  "false_positives": 542,
+  "false_negatives": 399,
+  "threshold": 0.5,
+  "split": "test",
+  "checkpoint": "/root/autodl-tmp/DCIA/outputs/checkpoints/reaction_sites/uspto50k/painn_a1_sparse_attention/best.pt",
+  "checkpoint_epoch": 39,
+  "primary_metric": "atom_f1"
+}

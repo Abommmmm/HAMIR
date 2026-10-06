@@ -1,0 +1,17 @@
+{
+  "atom_f1": 0.9154436598096407,
+  "atom_precision": 0.8703876693134049,
+  "atom_recall": 0.9654189871778267,
+  "top3_atom_hit_rate": 0.9963452347483834,
+  "exact_pair_center_accuracy": 0.7365757660950238,
+  "examples": 3557,
+  "true_positives": 7454,
+  "false_positives": 1110,
+  "false_negatives": 267,
+  "threshold": 0.5,
+  "split": "test",
+  "checkpoint": "/root/autodl-tmp/DCIA/outputs/checkpoints/reaction_sites/uspto50k/dracon_atom/best.pt",
+  "checkpoint_epoch": 46,
+  "primary_metric": "atom_f1",
+  "model_variant": "adapted_dracon_atom"
+}

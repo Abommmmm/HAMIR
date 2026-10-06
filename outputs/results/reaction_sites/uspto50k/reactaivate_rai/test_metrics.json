@@ -1,0 +1,17 @@
+{
+  "atom_f1": 0.9386924446705673,
+  "atom_precision": 0.9221541921779333,
+  "atom_recall": 0.9558347364331046,
+  "top3_atom_hit_rate": 0.9969075063255552,
+  "exact_pair_center_accuracy": 0.8138881079561429,
+  "examples": 3557,
+  "true_positives": 7380,
+  "false_positives": 623,
+  "false_negatives": 341,
+  "threshold": 0.5,
+  "split": "test",
+  "checkpoint": "/root/autodl-tmp/DCIA/outputs/checkpoints/reaction_sites/uspto50k/reactaivate_rai/best.pt",
+  "checkpoint_epoch": 51,
+  "primary_metric": "atom_f1",
+  "model_variant": "adapted_reactaivate_rai"
+}

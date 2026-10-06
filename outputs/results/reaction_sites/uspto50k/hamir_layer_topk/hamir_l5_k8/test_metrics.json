@@ -1,0 +1,20 @@
+{
+  "atom_f1": 0.9427329668924965,
+  "atom_precision": 0.9305993690851735,
+  "atom_recall": 0.955187151923326,
+  "top3_atom_hit_rate": 0.9960640989597975,
+  "exact_pair_center_accuracy": 0.8318807984256396,
+  "examples": 3557,
+  "true_positives": 7375,
+  "false_positives": 550,
+  "false_negatives": 346,
+  "threshold": 0.5,
+  "group_f1": 0.9747252747252747,
+  "group_precision": 0.9636067354698533,
+  "group_recall": 0.9861033907726515,
+  "split": "test",
+  "checkpoint": "/root/autodl-tmp/DCIA/outputs/checkpoints/reaction_sites/uspto50k/hamir_layer_topk/hamir_l5_k8/best.pt",
+  "checkpoint_epoch": 37,
+  "primary_metric": "atom_f1",
+  "model_variant": "painn"
+}

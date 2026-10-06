@@ -1,0 +1,19 @@
+{
+  "atom_f1": 0.9418023330342263,
+  "atom_precision": 0.9322421012561858,
+  "atom_recall": 0.9515606786685662,
+  "top3_atom_hit_rate": 0.99761034579702,
+  "exact_pair_center_accuracy": 0.835816699465842,
+  "examples": 3557,
+  "true_positives": 7347,
+  "false_positives": 534,
+  "false_negatives": 374,
+  "threshold": 0.5,
+  "group_f1": 0.975397973950796,
+  "group_precision": 0.9674641148325359,
+  "group_recall": 0.9834630350194552,
+  "split": "test",
+  "checkpoint": "/root/autodl-tmp/DCIA/outputs/checkpoints/reaction_sites/uspto50k/painn_a2_hierarchical_motif/best.pt",
+  "checkpoint_epoch": 36,
+  "primary_metric": "atom_f1"
+}
