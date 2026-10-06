@@ -2,7 +2,7 @@
 import numpy as np
 import torch
 from torch import nn
-from .a2_bond_layers import BondMessageLayer
+from .reaction_site_baselines import BondMessageLayer
 
 
 def collate_covalent(molecules):

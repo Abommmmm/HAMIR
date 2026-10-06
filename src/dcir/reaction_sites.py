@@ -19,9 +19,9 @@ from torch.utils.data import DataLoader, Dataset
 from tqdm.auto import tqdm
 
 from .config import load_config
-from .a2_data import collate_molecules, move_molecule_to_device
-from .a2_models import PaiNNEncoder, segment_mean
-from .a2_structures import atom_features, bond_features
+from .data import collate_molecules, move_molecule_to_device
+from .models import PaiNNEncoder, segment_mean
+from .structures import atom_features, bond_features
 
 
 def _rdkit():
@@ -640,16 +640,20 @@ class ReactionSitePaiNN(nn.Module):
         num_rbf: int = 20,
         cutoff: float = 5.0,
         dropout: float = 0.1,
-        architecture: str = "hierarchical_motif",
+        architecture: str = "conditioned",
         attention_heads: int = 4,
         attention_topk: int = 4,
         encoder_type: str = "painn",
     ):
         super().__init__()
-        if architecture != "hierarchical_motif":
+        if architecture not in {
+            "conditioned",
+            "sparse_cross_attention",
+            "hierarchical_motif",
+        }:
             raise ValueError(
-                "The source-only release supports only the A2 "
-                "hierarchical_motif architecture."
+                "architecture must be 'conditioned', "
+                "'sparse_cross_attention', or 'hierarchical_motif'"
             )
         if hidden_dim % attention_heads:
             raise ValueError("hidden_dim must be divisible by attention_heads")
@@ -1216,16 +1220,14 @@ def _amp_dtype(name: str, device: torch.device) -> torch.dtype | None:
 
 
 def _build_model(config: dict[str, Any]) -> nn.Module:
-    """Build only the released A2 hierarchical-motif architecture."""
     model_config = dict(config["model"])
-    family = str(model_config.pop("family", "painn")).lower()
-    architecture = str(model_config.get("architecture", ""))
-    if family != "painn" or architecture != "hierarchical_motif":
-        raise ValueError(
-            "This source-only release supports only the A2 "
-            "PaiNN hierarchical_motif architecture."
-        )
-    return ReactionSitePaiNN(**model_config)
+    family = str(model_config.get("family", "painn")).lower()
+    if family == "painn":
+        model_config.pop("family", None)
+        return ReactionSitePaiNN(**model_config)
+    from .reaction_site_baselines import build_reaction_site_baseline
+
+    return build_reaction_site_baseline(model_config)
 
 
 def _load_ddi_encoder(model: nn.Module, checkpoint_path: Path) -> None:
