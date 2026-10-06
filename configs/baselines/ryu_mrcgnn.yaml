@@ -1,0 +1,38 @@
+seed: 17
+baseline: mrcgnn
+
+paths:
+  audit_report: outputs/audit/ryu/audit_report.json
+  records: outputs/processed/ryu/records.csv
+  split: outputs/splits/ryu/pair_seed17.csv
+  graph_cache: outputs/cache/baselines/ryu/molecular_graphs_55.pt
+  checkpoints: outputs/checkpoints/baselines/ryu/mrcgnn
+
+model:
+  input_dim: 55
+  # Matches the width of the official pretrained TrimNet drug embeddings.
+  structural_dim: 128
+  hidden1: 64
+  hidden2: 32
+  dropout: 0.5
+  decoder_hidden: 256
+
+loss:
+  classification: weighted
+  max_class_weight: 50.0
+  focal_gamma: 2.0
+  node_contrastive_ratio: 0.05
+  relation_contrastive_ratio: 0.10
+
+training:
+  # The RGCN encodes the same train-only relation graph for every pair batch.
+  # A large pair batch avoids recomputing that full graph hundreds of times.
+  batch_size: 8192
+  num_workers: 0
+  mixed_precision: none
+  learning_rate: 0.001
+  weight_decay: 0.0005
+  lr_gamma: 0.98
+  epochs: 120
+  patience: 15
+  gradient_clip: 5.0

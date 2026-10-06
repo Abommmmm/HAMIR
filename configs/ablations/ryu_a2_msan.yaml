@@ -1,0 +1,53 @@
+seed: 17
+
+paths:
+  audit_report: outputs/audit/ryu/audit_report.json
+  records: outputs/processed/ryu/records.csv
+  split: outputs/splits/ryu/pair_seed17.csv
+  conformers: outputs/conformers/ryu
+  checkpoints: outputs/checkpoints/ablations/ryu/a2_msan
+
+data:
+  cutoff: 5.0
+
+model:
+  hidden_dim: 128
+  painn_layers: 5
+  num_rbf: 20
+  cutoff: 5.0
+  interaction_dim: 128
+  pair_dim: 128
+  class_dim: 64
+  heads: 4
+  dropout: 0.10
+  ablation: A2_MSAN
+  # Official CIKM 2022 DrugBank setting.
+  msan_num_patterns: 60
+  msan_prediction_layers: 3
+  msan_dropout: 0.50
+  msan_substructure_drop_probability: 0.50
+  msan_extractor_residual: false
+
+loss:
+  classification: weighted
+  focal_gamma: 2.0
+  max_class_weight: 50.0
+  lambda_faithfulness: 0.0
+  lambda_consistency: 0.0
+  lambda_sparsity: 0.0
+  explanation_warmup: 10
+  explanation_ramp_epochs: 5
+  mask_fraction: 0.10
+  faithfulness_margin: 0.10
+
+training:
+  batch_size: 128
+  num_workers: 16
+  mixed_precision: none
+  learning_rate: 0.0002
+  phase2_epoch: 10
+  phase2_learning_rate: 0.00005
+  weight_decay: 0.00001
+  epochs: 60
+  patience: 12
+  gradient_clip: 1.0
