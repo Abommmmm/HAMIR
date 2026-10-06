@@ -1,0 +1,19 @@
+﻿dataset,model,atom_f1,examples,metrics_path
+USPTO-50K,A2,0.9418023330342263,3557,E:\lunwen\project4\DCIA\outputs\results\reaction_sites\uspto50k\painn_a2_hierarchical_motif\test_metrics.json
+USPTO-50K,Adapted DRACON,0.9154436598096407,3557,E:\lunwen\project4\DCIA\outputs\results\reaction_sites\uspto50k\dracon_atom\test_metrics.json
+USPTO-50K,Adapted RMechRP,0.9333417259394472,3557,E:\lunwen\project4\DCIA\outputs\results\reaction_sites\uspto50k\rmechrp_site\test_metrics.json
+USPTO-50K,Adapted ReactAIvate,0.9386924446705673,3557,E:\lunwen\project4\DCIA\outputs\results\reaction_sites\uspto50k\reactaivate_rai\test_metrics.json
+USPTO-50K,Adapted EAC-2Hop,0.854565688514028,3557,E:\lunwen\project4\DCIA\outputs\results\reaction_sites\uspto50k\eac_2hop\test_metrics.json
+USPTO-50K,SPABA-style (no CLM pretraining),0.7153114886731392,3557,E:\lunwen\project4\DCIA\outputs\results\reaction_sites\uspto50k\spaba_style_7_7\test_metrics.json
+USPTO-MIT zero-shot,A2,0.6546059037921153,26078,E:\lunwen\project4\DCIA\outputs\results\reaction_sites\uspto_mit\painn_a2_zero_shot\test_metrics.json
+USPTO-MIT zero-shot,Adapted DRACON,0.6067865881530476,26078,E:\lunwen\project4\DCIA\outputs\results\reaction_sites\uspto_mit\dracon_atom_zero_shot\test_metrics.json
+USPTO-MIT zero-shot,Adapted RMechRP,0.587171275525852,26078,E:\lunwen\project4\DCIA\outputs\results\reaction_sites\uspto_mit\rmechrp_site_zero_shot\test_metrics.json
+USPTO-MIT zero-shot,Adapted ReactAIvate,0.5862653359792575,26078,E:\lunwen\project4\DCIA\outputs\results\reaction_sites\uspto_mit\reactaivate_rai_zero_shot\test_metrics.json
+USPTO-MIT zero-shot,Adapted EAC-2Hop,0.6053466672981805,26078,E:\lunwen\project4\DCIA\outputs\results\reaction_sites\uspto_mit\eac_2hop_zero_shot\test_metrics.json
+USPTO-MIT zero-shot,SPABA-style (no CLM pretraining),0.49251680067527354,26078,E:\lunwen\project4\DCIA\outputs\results\reaction_sites\uspto_mit\spaba_style_7_7_zero_shot\test_metrics.json
+USPTO-FULL zero-shot,A2,0.7068665976617723,66752,E:\lunwen\project4\DCIA\outputs\results\reaction_sites\uspto_full\painn_a2_zero_shot\test_metrics.json
+USPTO-FULL zero-shot,Adapted DRACON,0.6532388525598669,66752,E:\lunwen\project4\DCIA\outputs\results\reaction_sites\uspto_full\dracon_atom_zero_shot\test_metrics.json
+USPTO-FULL zero-shot,Adapted RMechRP,0.6265856937439372,66752,E:\lunwen\project4\DCIA\outputs\results\reaction_sites\uspto_full\rmechrp_site_zero_shot\test_metrics.json
+USPTO-FULL zero-shot,Adapted ReactAIvate,0.6283154019213818,66752,E:\lunwen\project4\DCIA\outputs\results\reaction_sites\uspto_full\reactaivate_rai_zero_shot\test_metrics.json
+USPTO-FULL zero-shot,Adapted EAC-2Hop,0.6636320497724038,66752,E:\lunwen\project4\DCIA\outputs\results\reaction_sites\uspto_full\eac_2hop_zero_shot\test_metrics.json
+USPTO-FULL zero-shot,SPABA-style (no CLM pretraining),0.500785062026572,66752,E:\lunwen\project4\DCIA\outputs\results\reaction_sites\uspto_full\spaba_style_7_7_zero_shot\test_metrics.json
